@@ -6,7 +6,6 @@
 > The analysis is useful for NGOs and the ministry of health in knowing the kind of people that healthcare interventions should be targeted to and the kind contents for the interventions based on lifestyle habits
 > The predictive model is useful for people/patients in finding out their diabetes status given some input characteristics or features
 > 
-> The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people in general along with their diagnosis of diabetes. The 35 features consist of some demographics, lab test results, and answers to survey questions for each patient. The target variable for classification is whether a patient has diabetes, is pre-diabetic, or healthy.
 > *One sentence. What did you analyze, build, or solve - and why does it matter?*
 
 ---
@@ -32,7 +31,6 @@
 4. [Repository Structure](#4-repository-structure)
 5. [Data Workflow](#5-data-workflow)
 6. [Data Model & Schema](#6-data-model--schema)
-7. [ERD - Entity Relationship Diagram](#7-erd--entity-relationship-diagram) *(SQL projects)*
 8. [Analysis & Metrics](#8-analysis--metrics)
 9. [Key Insights](#9-key-insights)
 10. [Recommendations](#10-recommendations)
@@ -63,16 +61,20 @@
   "This project analyzes sales data to find trends and insights."
   (Too vague. Could describe 10,000 projects. Describes none of them.)
 -->
+The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people in general along with their diagnosis of diabetes. The 35 features consist of some demographics, lab test results, and answers to survey questions for each patient. The target variable for classification is whether a patient has diabetes, is pre-diabetic, or healthy.
 
-**Context:** [The business, research, or personal situation that motivated this project.]
+
+**Context:** Diabetes is a rapidly growing global health burden — 589 million adults live with it worldwide (1 in 9), with cases projected to reach 853 million by 2050. Over 80% of those affected live in low- and middle-income countries, where prevalence is rising fastest and nearly half of diagnosed adults aren't on medication. Compounding this, an estimated 43% of cases go undiagnosed. In a country like Ghana, this makes data-driven identification of at-risk populations essential for guiding limited healthcare resources toward the people and interventions that need them most.
 
 **Problem Statement:** [The specific question or challenge you were addressing.]
+
 
 **Approach:** [In 1–2 sentences - how did you tackle it?]
 
 **Outcome:** [What did you produce or discover?]
 
 ---
+According to the International Diabetes Federation report in 2024, 589 million adults (20 - 79 years) were living with diabetes worldwide (1 in 9) with prediction indicating the total number will rise to 853 million by 2050 (1 in 8).
 
 ## 2. Objectives
 
