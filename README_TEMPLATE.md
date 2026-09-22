@@ -43,38 +43,18 @@ The Diabetes Health Indicators Dataset contains healthcare statistics and lifest
 
 **Problem Statement:** Governments and NGOs currently lack a clear, data-backed view of which socioeconomic factors, pre-existing health conditions, and lifestyle behaviours are most associated with diabetes risk in the population they serve - making it difficult to target screening, resource allocation, and health interventions effectively. This project analyzes healthcare and lifestyle survey data to identify these risk patterns, and builds a predictive model that can estimate an individual's diabetes status from selected health and lifestyle characteristics - supporting both population-level planning and individual risk awareness.
 
-**Approach:** After defining stakeholder objectives, I sourced the CDC Diabetes Health Indicators dataset, deliberately introduced realistic data quality issues to simulate a real-world messy dataset using Claude, then cleaned and prepared it in Python before analyzing and visualizing it in Power BI and building a predictive model in Python.
+**Approach:** After defining stakeholder objectives, I sourced the CDC Diabetes Health Indicators dataset (BRFSS 2015 survey), deliberately introduced realistic data quality issues to simulate a real-world messy dataset using Claude, then cleaned and prepared it in Python before analyzing and visualizing it in Power BI and building a predictive model in Python.
 
 **Outcome:** A cleaned, analysis-ready dataset, a Power BI dashboard showing which socioeconomic, clinical, and lifestyle factors are most associated with diabetes prevalence across different population segments and a predictive model capable of estimating diabetes status from selected health and lifestyle inputs.
 
 ---
 
 ## 2. Objectives
-
-<!--
-  Write objectives that are specific enough to succeed or fail.
-  Use action-oriented verbs: Identify, Determine, Quantify, Build, Evaluate.
-
-  WHAT GOOD LOOKS LIKE:
-  ✅ "Determine whether customer churn rate correlates with support ticket volume."
-  ✅ "Identify the top three revenue-driving product categories across all regions."
-  ✅ "Build a reproducible pipeline that ingests and cleans daily sales exports."
-
-  WHAT TO AVOID:
-  ❌ "Explore the data."
-  ❌ "Gain insights."
-  ❌ "Understand trends."
-  (These can't fail - which means they can't succeed either.)
--->
-
 - **Primary Objective:** Identify the socioeconomic, clinical, and lifestyle factors most associated with diabetes prevalence, and build a predictive model that estimates diabetes status from selected features.
-- **Secondary Objective 1:** [Supporting goal]
-- **Secondary Objective 2:** [Supporting goal]
-- **Secondary Objective 3:** [Remove if not applicable]
-- Primary Objective: Identify the socioeconomic, clinical, and lifestyle factors most associated with diabetes prevalence, and build a predictive model that estimates diabetes status from selected features.
-Secondary Objective 1: Determine whether socioeconomic background (income, education) influences diabetes prevalence, to support equitable healthcare access planning by government.
-Secondary Objective 2: Assess whether pre-existing health conditions (e.g., high blood pressure, high cholesterol) increase diabetes risk, so health authorities can prepare targeted care ahead of time.
-Secondary Objective 3: Identify which population segments and lifestyle habits should be prioritized in NGO/health interventions, and what those interventions should address.
+- **Secondary Objective 1:** Determine whether socioeconomic background (income, education) influences diabetes prevalence, to support equitable healthcare access planning by government.
+- **Secondary Objective 2:** Assess whether pre-existing health conditions (e.g., high blood pressure, high cholesterol) increase diabetes risk, so health authorities can prepare targeted care ahead of time.
+- **Secondary Objective 3:** Identify which population segments and lifestyle habits should be prioritized in NGO/health interventions, and what those interventions should address.
+- **Secondary Objective 4:** Give patients/individuals a way to estimate their own diabetes risk from personal health and lifestyle characteristics, supporting early awareness and self-directed screening.
 
 > 💡 *Every analysis decision in this project traces back to one of these objectives.*
 
@@ -84,25 +64,12 @@ Secondary Objective 3: Identify which population segments and lifestyle habits s
 
 ### Scope
 
-<!--
-  WHAT GOOD LOOKS LIKE:
-  In Scope: "Transaction-level data for Regions A–E, Jan 2023–Jun 2024.
-             Analysis covers revenue, return rates, and product category performance."
-  Out of Scope: "Customer demographics and marketing spend data were excluded -
-                 demographic data was incomplete for two regions, and marketing
-                 data sits in a separate system outside this engagement."
-
-  WHAT TO AVOID:
-  ❌ Leaving Out of Scope blank. This is the section that protects your credibility.
-     If you don't define the fence, reviewers assume you missed things.
--->
-
 | Dimension | Details |
 |-----------|---------|
-| **In Scope** | [What is included - data sources, time periods, segments] |
-| **Out of Scope** | [What you explicitly excluded - and a brief reason why] |
-| **Time Period** | [Date range of the data or the project itself] |
-| **Granularity** | [Unit of analysis - row-level, daily aggregates, per-user, etc.] |
+| **In Scope** | CDC Diabetes Health Indicators dataset (BRFSS 2015 survey), individual-level self-reported health, lifestyle, and socioeconomic indicators, and diabetes status for U.S. respondents. The dataset was deliberately modified with realistic data quality issues to practice a full data analytics workflow, analyzed and framed around questions relevant to a low- and middle-income country context (e.g., Ghana).|
+| **Out of Scope** | Geographic/regional analysis (no location variable in the dataset), trend or time-series analysis, gestational diabetes/pregnancy-related hyperglycemia (no pregnancy variable present). Underlying values (income brackets, prevalence rates, healthcare access patterns) reflect the U.S. context in which the data was originally collected, and are not directly generalizable to Ghana or another lower and middle income countries.|
+| **Time Period** | Data reflects a single point-in-time survey (BRFSS 2015) - no time-series component.|
+| **Granularity** | Row-level / individual respondent - one row per survey participant. |
 
 ### Tools & Technologies
 
