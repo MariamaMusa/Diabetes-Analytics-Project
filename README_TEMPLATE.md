@@ -35,10 +35,6 @@
 ---
 
 ## 1. Project Overview
-
-The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people in general along with their diagnosis of diabetes. The 35 features consist of some demographics, lab test results, and answers to survey questions for each patient. The target variable for classification is whether a patient has diabetes, is pre-diabetic, or healthy.
-
-
 **Context:** Diabetes is a rapidly growing global health burden - 589 million adults live with it worldwide (1 in 9), with cases projected to reach 853 million by 2050. Over 81% of those affected live in low- and middle-income countries, where prevalence is rising fastest and nearly half of diagnosed adults aren't on medication. Compounding this, an estimated 43% of cases go undiagnosed. In a country like Ghana, this makes data-driven identification of at-risk populations essential for guiding limited healthcare resources toward the people and interventions that need them most.
 
 **Problem Statement:** Governments and NGOs currently lack a clear, data-backed view of which socioeconomic factors, pre-existing health conditions, and lifestyle behaviours are most associated with diabetes risk in the population they serve - making it difficult to target screening, resource allocation, and health interventions effectively. This project analyzes healthcare and lifestyle survey data to identify these risk patterns, and builds a predictive model that can estimate an individual's diabetes status from selected health and lifestyle characteristics - supporting both population-level planning and individual risk awareness.
