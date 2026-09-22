@@ -1,4 +1,12 @@
-# [Project Title]
+# Diabetes Analytics Project
+> This project analyzes healthcare statistics and lifestyle survey information about people in general along with their diagnosis of diabetes.
+> It also includes a predictive model for predicting diabetes status of people given some selected features.
+> 
+> The analysis is useful for the government in knowing whether socio-economic background has an influence on diabetes prevalence which will encourge the government in providing equitable healthcare access. Also, it's useful for the ministry of health in know whether prevoius heath conditions increases the risk of diabetes so as to prepare ahead for such patients.
+> The analysis is useful for NGOs and the ministry of health in knowing the kind of people that healthcare interventions should be targeted to and the kind contents for the interventions based on lifestyle habits
+> The predictive model is useful for people/patients in finding out their diabetes status given some input characteristics or features
+> 
+> The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people in general along with their diagnosis of diabetes. The 35 features consist of some demographics, lab test results, and answers to survey questions for each patient. The target variable for classification is whether a patient has diabetes, is pre-diabetic, or healthy.
 > *One sentence. What did you analyze, build, or solve - and why does it matter?*
 
 ---
