@@ -1,7 +1,4 @@
 # Data files - don't commit actual data to Git
-*.csv
-*.xlsx
-*.xls
 *.parquet
 *.json
 *.xml
