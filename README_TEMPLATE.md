@@ -1,12 +1,5 @@
 # Diabetes Analytics Project
-> This project analyzes healthcare statistics and lifestyle survey information about people in general along with their diagnosis of diabetes.
-> It also includes a predictive model for predicting diabetes status of people given some selected features.
-> 
-> The analysis is useful for the government in knowing whether socio-economic background has an influence on diabetes prevalence which will encourge the government in providing equitable healthcare access. Also, it's useful for the ministry of health in know whether prevoius heath conditions increases the risk of diabetes so as to prepare ahead for such patients.
-> The analysis is useful for NGOs and the ministry of health in knowing the kind of people that healthcare interventions should be targeted to and the kind contents for the interventions based on lifestyle habits
-> The predictive model is useful for people/patients in finding out their diabetes status given some input characteristics or features
-> 
-> *One sentence. What did you analyze, build, or solve - and why does it matter?*
+> This project analyzed healthcare statistics and lifestyle survey information data to identify the socioeconomic, clinical, and behavioral factors most associated with diabetes risk, and built a predictive model to estimate diabetes status from them - equipping governments and NGOs to target screening and interventions where they're needed most, in a country where over 80% of diabetes cases occur and diagnosis often comes too late.
 
 ---
 
@@ -43,38 +36,18 @@
 
 ## 1. Project Overview
 
-<!--
-  Write 3–5 sentences in plain language.
-  Cover: context → problem → approach → outcome.
-  Read it out loud. If it sounds like a form - rewrite it.
-
-  WHAT GOOD LOOKS LIKE:
-  "A mid-size retail business was seeing inconsistent revenue across
-  its regional stores but couldn't identify the root cause. This project
-  explored 18 months of transaction data across five regions to determine
-  whether underperformance was driven by sales volume, pricing, or return
-  rates. The analysis revealed that one region's gap was almost entirely
-  explained by an unusually high return rate on a single product category -
-  a finding invisible in the company's top-level reporting."
-
-  WHAT TO AVOID:
-  "This project analyzes sales data to find trends and insights."
-  (Too vague. Could describe 10,000 projects. Describes none of them.)
--->
 The Diabetes Health Indicators Dataset contains healthcare statistics and lifestyle survey information about people in general along with their diagnosis of diabetes. The 35 features consist of some demographics, lab test results, and answers to survey questions for each patient. The target variable for classification is whether a patient has diabetes, is pre-diabetic, or healthy.
 
 
-**Context:** Diabetes is a rapidly growing global health burden — 589 million adults live with it worldwide (1 in 9), with cases projected to reach 853 million by 2050. Over 80% of those affected live in low- and middle-income countries, where prevalence is rising fastest and nearly half of diagnosed adults aren't on medication. Compounding this, an estimated 43% of cases go undiagnosed. In a country like Ghana, this makes data-driven identification of at-risk populations essential for guiding limited healthcare resources toward the people and interventions that need them most.
+**Context:** Diabetes is a rapidly growing global health burden - 589 million adults live with it worldwide (1 in 9), with cases projected to reach 853 million by 2050. Over 81% of those affected live in low- and middle-income countries, where prevalence is rising fastest and nearly half of diagnosed adults aren't on medication. Compounding this, an estimated 43% of cases go undiagnosed. In a country like Ghana, this makes data-driven identification of at-risk populations essential for guiding limited healthcare resources toward the people and interventions that need them most.
 
-**Problem Statement:** [The specific question or challenge you were addressing.]
+**Problem Statement:** Governments and NGOs currently lack a clear, data-backed view of which socioeconomic factors, pre-existing health conditions, and lifestyle behaviours are most associated with diabetes risk in the population they serve - making it difficult to target screening, resource allocation, and health interventions effectively. This project analyzes healthcare and lifestyle survey data to identify these risk patterns, and builds a predictive model that can estimate an individual's diabetes status from selected health and lifestyle characteristics - supporting both population-level planning and individual risk awareness.
 
+**Approach:** After defining stakeholder objectives, I sourced the CDC Diabetes Health Indicators dataset, deliberately introduced realistic data quality issues to simulate a real-world messy dataset using Claude, then cleaned and prepared it in Python before analyzing and visualizing it in Power BI and building a predictive model in Python.
 
-**Approach:** [In 1–2 sentences - how did you tackle it?]
-
-**Outcome:** [What did you produce or discover?]
+**Outcome:** A cleaned, analysis-ready dataset, a Power BI dashboard showing which socioeconomic, clinical, and lifestyle factors are most associated with diabetes prevalence across different population segments and a predictive model capable of estimating diabetes status from selected health and lifestyle inputs.
 
 ---
-According to the International Diabetes Federation report in 2024, 589 million adults (20 - 79 years) were living with diabetes worldwide (1 in 9) with prediction indicating the total number will rise to 853 million by 2050 (1 in 8).
 
 ## 2. Objectives
 
@@ -94,10 +67,14 @@ According to the International Diabetes Federation report in 2024, 589 million a
   (These can't fail - which means they can't succeed either.)
 -->
 
-- **Primary Objective:** [The main thing you set out to do]
+- **Primary Objective:** Identify the socioeconomic, clinical, and lifestyle factors most associated with diabetes prevalence, and build a predictive model that estimates diabetes status from selected features.
 - **Secondary Objective 1:** [Supporting goal]
 - **Secondary Objective 2:** [Supporting goal]
 - **Secondary Objective 3:** [Remove if not applicable]
+- Primary Objective: Identify the socioeconomic, clinical, and lifestyle factors most associated with diabetes prevalence, and build a predictive model that estimates diabetes status from selected features.
+Secondary Objective 1: Determine whether socioeconomic background (income, education) influences diabetes prevalence, to support equitable healthcare access planning by government.
+Secondary Objective 2: Assess whether pre-existing health conditions (e.g., high blood pressure, high cholesterol) increase diabetes risk, so health authorities can prepare targeted care ahead of time.
+Secondary Objective 3: Identify which population segments and lifestyle habits should be prioritized in NGO/health interventions, and what those interventions should address.
 
 > 💡 *Every analysis decision in this project traces back to one of these objectives.*
 
