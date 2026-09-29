@@ -19,7 +19,7 @@
 3. [Project Scope & Tools](#3-project-scope--tools)
 4. [Repository Structure](#4-repository-structure)
 5. [Data Workflow](#5-data-workflow)
-6. [Dataset](#6-dataset)
+6. [Clean Dataset](#6-clean-dataset)
 7. [Analysis & Metrics](#7-analysis--metrics)
 8. [Key Insights](#8-key-insights)
 9. [Recommendations](#9-recommendations)
@@ -134,7 +134,7 @@
 
 ---
 
-## 6. Dataset
+## 6. Clean Dataset
 
 ### Field Mapping
 
@@ -174,7 +174,7 @@
 ## 7. Analysis & Metrics
 ### Analytical Approach
 
-This project combined exploratory and hypothesis-driven analysis with predictive modelling. The exploratory phase examined distributions, missingness, and outliers in BMI, Mental Health, and Physical Health to inform cleaning decisions. The hypothesis-driven phase tested whether diabetes prevalence varies meaningfully by socioeconomic factors (income, education), pre-existing health conditions (high blood pressure, high cholesterol), and lifestyle behaviors (smoking, physical activity, diet), in line with the stakeholder questions defined in Section [1]. A logistic regression model was then built and validated to predict diabetes status from selected features.
+This project combined exploratory and hypothesis-driven analysis with predictive modelling. The exploratory phase examined distributions, missingness, and outliers in BMI, Mental Health, and Physical Health to inform cleaning decisions. The hypothesis-driven phase tested whether diabetes prevalence varies meaningfully by socioeconomic factors (income, education), pre-existing health conditions (high blood pressure, high cholesterol), and lifestyle behaviors (smoking, physical activity, diet), in line with the stakeholder questions defined in Section [1](#1-project-overview). A logistic regression model was then built and validated to predict diabetes status from selected features.
 
 ### Key Metrics Defined
 
