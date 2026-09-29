@@ -19,14 +19,14 @@
 3. [Project Scope & Tools](#3-project-scope--tools)
 4. [Repository Structure](#4-repository-structure)
 5. [Data Workflow](#5-data-workflow)
-6. [Data Model & Schema](#6-data-model--schema)
-8. [Analysis & Metrics](#8-analysis--metrics)
-9. [Key Insights](#9-key-insights)
-10. [Recommendations](#10-recommendations)
-11. [Assumptions & Limitations](#11-assumptions--limitations)
-12. [Future Enhancements](#12-future-enhancements)
-13. [Deliverables](#13-deliverables)
-14. [Author](#14-author)
+6. [Dataset](#6-dataset)
+7. [Analysis & Metrics](#7-analysis--metrics)
+8. [Key Insights](#8-key-insights)
+9. [Recommendations](#9-recommendations)
+10. [Assumptions & Limitations](#10-assumptions--limitations)
+11. [Future Enhancements](#11-future-enhancements)
+12. [Deliverables](#12-deliverables)
+13. [Author](#13-author)
 
 ---
 
@@ -136,7 +136,7 @@
 
 ## 6. Dataset
 
-### Field Mapping & Schema
+### Field Mapping
 
 | Field Name (this dataset) | Original UCI Field | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|---------------|
@@ -171,7 +171,7 @@
 
 ---
 
-## 8. Analysis & Metrics
+## 7. Analysis & Metrics
 ### Analytical Approach
 
 This project combined exploratory and hypothesis-driven analysis with predictive modelling. The exploratory phase examined distributions, missingness, and outliers in BMI, Mental Health, and Physical Health to inform cleaning decisions. The hypothesis-driven phase tested whether diabetes prevalence varies meaningfully by socioeconomic factors (income, education), pre-existing health conditions (high blood pressure, high cholesterol), and lifestyle behaviors (smoking, physical activity, diet), in line with the stakeholder questions defined in Section [1]. A logistic regression model was then built and validated to predict diabetes status from selected features.
@@ -197,7 +197,7 @@ This project combined exploratory and hypothesis-driven analysis with predictive
 - Logistic regression (scikit-learn) for predictive modelling, with train/test split and cross-validation
 ---
 
-## 9. Key Insights
+## 8. Key Insights
 
 <!--
   Findings + implications. Not just what happened - what it means.
@@ -231,7 +231,7 @@ This project combined exploratory and hypothesis-driven analysis with predictive
 
 ---
 
-## 10. Recommendations
+## 9. Recommendations
 
 <!--
   Action-oriented. Addressed to a real audience.
@@ -260,7 +260,7 @@ This project combined exploratory and hypothesis-driven analysis with predictive
 
 ---
 
-## 11. Assumptions & Limitations
+## 10. Assumptions & Limitations
 
 <!--
   WHAT GOOD LOOKS LIKE:
@@ -292,7 +292,7 @@ This project combined exploratory and hypothesis-driven analysis with predictive
 
 ---
 
-## 12. Future Enhancements
+## 11. Future Enhancements
 
 <!--
   WHAT GOOD LOOKS LIKE:
@@ -314,7 +314,7 @@ This project combined exploratory and hypothesis-driven analysis with predictive
 
 ---
 
-## 13. Deliverables
+## 12. Deliverables
 
 | Deliverable | Description | Location |
 |-------------|-------------|----------|
@@ -324,9 +324,10 @@ This project combined exploratory and hypothesis-driven analysis with predictive
 
 ---
 
-## 14. Author
+## 13. Author
 
 **Mariama Musa**
+
 Data Analyst
 
 - 🔗 https://www.linkedin.com/in/mariama-musa/
