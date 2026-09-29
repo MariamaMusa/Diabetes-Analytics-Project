@@ -141,11 +141,53 @@ Refer to the [CDC Diabetes Health Indicators dataset](https://archive.ics.uci.ed
 
 | Field Name (this dataset) | Original UCI Field | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|---------------|
-| Diabetes Status | Diabetes_012 |string  | Diabetes status of the respondent | No diabetes |
-|------------|-----------|-------------|---------------|---------------|
-| BMI Category | string  | BMI category derived from the BMI field | Overweight |
+| Diabetes Status | Diabetes_012 | string | Diabetes status of the respondent | No diabetes |
+| High BP | HighBP | string | Had high blood pressure | Yes |
+| High Cholesterol| HighChol | string | Had high cholesterol | No |
+| Cholesterol Checked | CholCheck | string | Had a cholesterol check within the past 5 years | Yes |
+
+| Smoker | Smoker | string | Smoked at least 100 cigarettes in their lifetime | Yes |
+
+| Stroke | Stroke | string | Ever told they had a stroke | Yes |
+
+| Heart Disease/Attack | HeartDiseaseorAttack | string | History of coronary heart disease or myocardial infarction | Yes |
+
+| Physical Activity | PhysActivity | string | Physical activity in past 30 days (excluding job) | No |
+
+| Fruits | Fruits | string | Consumes fruit one or more times per day | Yes |
+
+| Vegetables | Veggies | string | Consumes vegetables one or more times per day | Yes |
+
+| Heavy Drinker | HvyAlcoholConsump | string | Heavy alcohol consumption(more than 14 drinks per week for men and more than 7 drinks per week for women) | No |
+
+| Healthcare Coverage | AnyHealthcare | string | Has any kind of healthcare coverage | Yes |
+
+| No Doctor (Cost) | NoDocbcCost | string | Needed to see a doctor in the past year but couldn't due to cost | No |
+
+| Difficulty Moving | DiffWalk | string | Serious difficulty walking or climbing stairs | No |
+
+| Sex | Sex | string | Sex of respondent | Female |
+
+| General Health | GenHlth | string | Self-rated general health | Good |
+
+| Age | Age | string | Age bracket (13-level categories) | 18 - 24 |
+
+| Education | Education | string | 	Highest level of education completed | Yes |
+
+| Stroke | Stroke | string | Ever told they had a stroke | College graduate (4 years or more) |
+
+| Income | Income | string | Income bracket | $50,000 to less than $75,000 |
+
+| BMI | BMI | integer | Body Mass Index | 27 |
+
+| Mental Health | MentHlth | integer | Number of days of poor mental health in the past 30 days | 3 |
+
+| Physical Health | PhysHlth | integer | Number of days of poor physical health in past the 30 days| 0 |
+
+| BMI Category (derive) | - | string | BMI category derived from the BMI field | Overweight |
 
 > **Row count of the cleaned dataset:** 249669
+> 
 > **Column count of the cleaned dataset:** 23
 
 ---
@@ -171,25 +213,27 @@ Refer to the [CDC Diabetes Health Indicators dataset](https://archive.ics.uci.ed
 
 ### Analytical Approach
 
-[Describe how you approached the analysis. Were you exploring patterns? Testing a hypothesis? Building and validating a pipeline? Be honest about your method - exploratory work is valid, just call it that.]
+This project combined exploratory and hypothesis-driven analysis with predictive modelling. The exploratory phase examined distributions, missingness, and outliers in BMI, Mental Health, and Physical Health to inform cleaning decisions. The hypothesis-driven phase tested whether diabetes prevalence varies meaningfully by socioeconomic factors (income, education), pre-existing health conditions (high blood pressure, high cholesterol), and lifestyle behaviors (smoking, physical activity, diet), in line with the stakeholder questions defined in Section [1]. A logistic regression model was then built and validated to predict diabetes status from selected features.
 
 ### Key Metrics Defined
 
-| Metric | Plain-Language Definition | Why It Matters |
+| Metric | Definition | Why It Matters |
 |--------|--------------------------|----------------|
-| `[Metric 1]` | [What it measures, in one sentence] | [What decision or question it answers] |
-| `[Metric 2]` | [What it measures, in one sentence] | [What decision or question it answers] |
+| Diabetes Prevalence Rate | Number of respondents with "Diabetes" divided by total respondents (excluding "Unknown"), calculated overall and by segment (income, education, age, sex) | The core measure used to compare risk across population segments and answer both government and NGO stakeholder questions |
+| Comorbidity Count | Number of pre-existing conditions (High BP, High Cholesterol, Heart Disease/Attack, Stroke) a respondent has, from 0 to 4 | Tests whether prior health conditions compound diabetes risk, directly answering the Ministry of Health's question on preparing ahead for at-risk patients |
+| Lifestyle Risk Score | Count of unhealthy lifestyle behaviors present (e.g., smoking, physical inactivity, low fruit/vegetable intake, heavy drinking), from 0 to 4 | Identifies whether risk scales with the number of modifiable behaviors, informing which lifestyle factors NGO interventions should prioritize |
+| Healthcare Access Gap | Percentage of respondents lacking healthcare coverage or reporting cost as a barrier to seeing a doctor, compared by income bracket | Surfaces whether access barriers — not just prevalence — differ by socioeconomic status, relevant to the government's equitable-access question |
+
 | `[Metric 3]` | [What it measures, in one sentence] | [What decision or question it answers] |
 
 ### Methods Used
 
-- [e.g., Descriptive statistics - distribution, central tendency, outlier detection]
-- [e.g., Trend analysis across [time period]]
-- [e.g., Segmentation / group comparison by [dimension]]
-- [e.g., Correlation analysis between [variable A] and [variable B]]
-- [e.g., SQL window functions for [specific aggregation]]
-- [e.g., Custom aggregation or transformation logic in [tool]]
-
+- Descriptive statistics — distribution, central tendency, and outlier detection (used to inform BMI/Mental Health/Physical Health cleaning decisions)
+- Segmentation / group comparison of diabetes prevalence by income, education, age, and sex
+- Comorbidity and lifestyle risk scoring — aggregating related binary indicators into composite counts
+- Association analysis between categorical risk factors (e.g., High BP, Smoker) and diabetes status
+- DAX measures in Power BI for prevalence rates and segment-level KPIs
+- Logistic regression (scikit-learn) for predictive modelling, with train/test split and cross-validation
 ---
 
 ## 9. Key Insights
