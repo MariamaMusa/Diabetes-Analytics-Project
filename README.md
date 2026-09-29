@@ -10,7 +10,6 @@
 - [ ] Data Pipeline / ETL
 - [x] Dashboard / Data Visualization
 - [x] Predictive Modelling / Machine Learning
-- [x] End-to-End (multiple of the above)
 - [ ] Other: ___________
 ---
 
