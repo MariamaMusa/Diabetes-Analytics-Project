@@ -35,7 +35,7 @@
 
 **Problem Statement:** Governments and NGOs currently lack a clear, data-backed view of which socioeconomic factors, pre-existing health conditions, and lifestyle behaviours are most associated with diabetes risk in the population they serve - making it difficult to target screening, resource allocation, and health interventions effectively. This project analyzes healthcare and lifestyle survey data to identify these risk patterns, and builds a predictive model that can estimate an individual's diabetes status from selected health and lifestyle characteristics - supporting both population-level planning and individual risk awareness.
 
-**Approach:** After defining stakeholder objectives, I sourced the CDC Diabetes Health Indicators dataset (BRFSS 2015 survey), deliberately introduced realistic data quality issues to simulate a real-world messy dataset using Claude, then cleaned and prepared it in Python before analyzing and visualizing it in Power BI and building a predictive model in Python.
+**Approach:** After defining stakeholder objectives, I sourced the [CDC Diabetes Health Indicators dataset](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators) (BRFSS 2015 survey), deliberately introduced realistic data quality issues to simulate a real-world messy dataset using Claude, then cleaned and prepared it in Python before analyzing and visualizing it in Power BI and building a predictive model in Python.
 
 **Outcome:** A cleaned, analysis-ready dataset, a Power BI dashboard showing which socioeconomic, clinical, and lifestyle factors are most associated with diabetes prevalence across different population segments and a predictive model capable of estimating diabetes status from selected health and lifestyle inputs.
 
@@ -58,7 +58,7 @@
 
 | Dimension | Details |
 |-----------|---------|
-| **In Scope** | CDC Diabetes Health Indicators dataset (BRFSS 2015 survey), individual-level self-reported health, lifestyle, and socioeconomic indicators, and diabetes status for U.S. respondents. The dataset was deliberately modified with realistic data quality issues to practice a full data analytics workflow, analyzed and framed around questions relevant to a low- and middle-income country context (e.g., Ghana).|
+| **In Scope** | [CDC Diabetes Health Indicators dataset](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators) (BRFSS 2015 survey), individual-level self-reported health, lifestyle, and socioeconomic indicators, and diabetes status for U.S. respondents. The dataset was deliberately modified with realistic data quality issues to practice a full data analytics workflow, analyzed and framed around questions relevant to a low- and middle-income country context (e.g., Ghana).|
 | **Out of Scope** | Geographic/regional analysis (no location variable in the dataset), trend or time-series analysis, gestational diabetes/pregnancy-related hyperglycemia (no pregnancy variable present). Underlying values (income brackets, prevalence rates, healthcare access patterns) reflect the U.S. context in which the data was originally collected, and are not directly generalizable to Ghana or another lower and middle income countries.|
 | **Time Period** | Data reflects a single point-in-time survey (BRFSS 2015) - no time-series component.|
 | **Granularity** | Row-level / individual respondent - one row per survey participant. |
@@ -137,7 +137,6 @@
 ## 6. Dataset
 
 ### Field Mapping & Schema
-Refer to the [CDC Diabetes Health Indicators dataset](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators) for detailed description of the various fields/columns
 
 | Field Name (this dataset) | Original UCI Field | Data Type | Description | Example Value |
 |------------|-----------|-------------|---------------|---------------|
@@ -145,45 +144,25 @@ Refer to the [CDC Diabetes Health Indicators dataset](https://archive.ics.uci.ed
 | High BP | HighBP | string | Had high blood pressure | Yes |
 | High Cholesterol| HighChol | string | Had high cholesterol | No |
 | Cholesterol Checked | CholCheck | string | Had a cholesterol check within the past 5 years | Yes |
-
 | Smoker | Smoker | string | Smoked at least 100 cigarettes in their lifetime | Yes |
-
 | Stroke | Stroke | string | Ever told they had a stroke | Yes |
-
 | Heart Disease/Attack | HeartDiseaseorAttack | string | History of coronary heart disease or myocardial infarction | Yes |
-
 | Physical Activity | PhysActivity | string | Physical activity in past 30 days (excluding job) | No |
-
 | Fruits | Fruits | string | Consumes fruit one or more times per day | Yes |
-
 | Vegetables | Veggies | string | Consumes vegetables one or more times per day | Yes |
-
 | Heavy Drinker | HvyAlcoholConsump | string | Heavy alcohol consumption(more than 14 drinks per week for men and more than 7 drinks per week for women) | No |
-
 | Healthcare Coverage | AnyHealthcare | string | Has any kind of healthcare coverage | Yes |
-
 | No Doctor (Cost) | NoDocbcCost | string | Needed to see a doctor in the past year but couldn't due to cost | No |
-
 | Difficulty Moving | DiffWalk | string | Serious difficulty walking or climbing stairs | No |
-
 | Sex | Sex | string | Sex of respondent | Female |
-
 | General Health | GenHlth | string | Self-rated general health | Good |
-
 | Age | Age | string | Age bracket (13-level categories) | 18 - 24 |
-
 | Education | Education | string | 	Highest level of education completed | Yes |
-
 | Stroke | Stroke | string | Ever told they had a stroke | College graduate (4 years or more) |
-
 | Income | Income | string | Income bracket | $50,000 to less than $75,000 |
-
 | BMI | BMI | integer | Body Mass Index | 27 |
-
 | Mental Health | MentHlth | integer | Number of days of poor mental health in the past 30 days | 3 |
-
 | Physical Health | PhysHlth | integer | Number of days of poor physical health in past the 30 days| 0 |
-
 | BMI Category (derive) | - | string | BMI category derived from the BMI field | Overweight |
 
 > **Row count of the cleaned dataset:** 249669
@@ -193,24 +172,6 @@ Refer to the [CDC Diabetes Health Indicators dataset](https://archive.ics.uci.ed
 ---
 
 ## 8. Analysis & Metrics
-
-<!--
-  Explain what you measured and how - before you share what you found.
-
-  WHAT GOOD LOOKS LIKE:
-  Metric: "Customer Return Rate"
-  Definition: "Number of transactions flagged as returns divided by total
-               transactions, calculated at product-category and regional grain."
-  Why It Matters: "Return rate - not sales volume - was hypothesised to
-                  explain regional revenue gaps. This metric tests that hypothesis."
-
-  WHAT TO AVOID:
-  ❌ Defining a metric only in code: SUM(returns) / COUNT(transaction_id)
-     That's an implementation. Write the plain-language definition here.
-     Both belong in your project - the definition in the README,
-     the implementation in the code.
--->
-
 ### Analytical Approach
 
 This project combined exploratory and hypothesis-driven analysis with predictive modelling. The exploratory phase examined distributions, missingness, and outliers in BMI, Mental Health, and Physical Health to inform cleaning decisions. The hypothesis-driven phase tested whether diabetes prevalence varies meaningfully by socioeconomic factors (income, education), pre-existing health conditions (high blood pressure, high cholesterol), and lifestyle behaviors (smoking, physical activity, diet), in line with the stakeholder questions defined in Section [1]. A logistic regression model was then built and validated to predict diabetes status from selected features.
