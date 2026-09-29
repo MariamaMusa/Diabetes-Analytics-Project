@@ -111,86 +111,42 @@
 
 ## 5. Data Workflow
 
-<!--
-  Show how data moved through your project - from source to output.
-  Every transformation decision should be traceable here.
-
-  WHAT GOOD LOOKS LIKE:
-  1. Source: "Monthly CSV exports pulled from the internal POS system.
-              Five files, one per region, covering Jan 2023–Jun 2024."
-  2. Ingestion: "Loaded into Python using pandas. Files concatenated into
-                 a single dataframe (approx. 340,000 rows)."
-  3. Cleaning: "Removed 1.2% of rows with null transaction IDs.
-                Standardised date formats across regional files.
-                Resolved product category naming inconsistencies (3 variants → 1)."
-  4. Transformation: "Created a returns_rate field at product-category level.
-                      Aggregated to weekly and regional grain for trend analysis."
-  5. Analysis: "Descriptive statistics, regional comparison, return rate
-                segmentation by product category."
-  6. Output: "Summary report (PDF), annotated notebook, processed CSV."
-
-  WHAT TO AVOID:
-  ❌ "Data was cleaned and analysed." (No chain. No decisions. No trust.)
--->
-
 ```
 [Data Source]
       ↓
 [Ingestion / Collection Method]
       ↓
-[Cleaning & Transformation]
+[Cleaning]
+      ↓
+[Transformation]
       ↓
 [Analysis / Modelling]
       ↓
 [Output / Visualisation / Reporting]
 ```
 
-1. **Source:** CDC Diabetes Health Indicators dataset [Clickable text](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
-2. [Where did the data come from? Format, size, access method.]
-3. **Ingestion:** [How was it brought in?]
-4. **Cleaning:** [What issues did you find and fix?]
-5. **Transformation:** [What new fields, aggregations, or structures did you create?]
-6. **Analysis:** [What methods - statistical, visual, query-based, model-based?]
-7. **Output:** [What form do the results take?]
+1. **Source:** [CDC Diabetes Health Indicators dataset](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators) based on the 2015 BRFSS survey. The dataset was deliberately modified to introduce realistic data quality issues for practice purposes. The new CSV file has 257,485 rows and 23 fields/columns. (Access the modified dataset from the data folder)
+2. **Ingestion:** Loaded into Python using pandas
+3. **Cleaning:** Removed 3,805 duplicate rows, dropped the unwanted RecordID column, renamed the fields/columns, trimmed extra whitespace from column values, standardized inconsistent categorical values, replaced invalid values, visualized the distribution of BMI, physical health and mental health values using boxplots and histograms to determine the best imputation method to use and replaced  missing values in the caategorical columns, stripped embedded units of measurement from BMI, converted BMI, Mental Health, and Physical Heallth from string to integer type, corrected negative values in BMI, Mental Health, and Physical Health to positive, removed BMI outliers (values below 14 or above 80) and removed rows where Mental Health or Physical Health exceeded the valid 30-day range       
+4. **Transformation:** Created a BMI category column from the BMI column. Created DAX measures for the dashboard creation. Encoded categorical values to numerical for machine learning. Dealt with the imbalanced classes. Split the dataset into train and test set and used cross-validation
+5. **Analysis:** Exploratory and visual analysis in Power BI (prevalence breakdowns by socioeconomic, clinical, and lifestyle factors), predictive modelling in Python using logistic regression via scikit-learn
+6. **Output:** An interactive Power BI dashboard, presentation slides, and a trained predictive model that estimates diabetes status from selected input features.
 
 ---
 
-## 6. Data Model & Schema
+## 6. Dataset
 
-<!--
-  Define your fields so that someone reading your analysis can follow along
-  without digging through your code.
+### Field Mapping & Schema
+Refer to the [CDC Diabetes Health Indicators dataset](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators) for detailed description of the various fields/columns
 
-  WHAT GOOD LOOKS LIKE (one row example):
-  | transaction_id | string | Unique identifier per sales transaction | TXN-00482 |
-  | return_flag    | boolean | Whether the transaction included a return | TRUE |
-  | region_code    | string | Two-letter identifier for store region | "NE" |
+| Field Name (this dataset) | Original UCI Field | Data Type | Description | Example Value |
+|------------|-----------|-------------|---------------|---------------|
+| Diabetes Status | Diabetes_012 |string  | Diabetes status of the respondent | No diabetes |
+|------------|-----------|-------------|---------------|---------------|
+| BMI Category | string  | BMI category derived from the BMI field | Overweight |
 
-  WHAT TO AVOID:
-  ❌ Skipping this section because "the field names are self-explanatory."
-     They're not. Not to a reviewer. Not to you in six months.
-
-  📌 FOR SQL PROJECTS: If you have multiple tables, create one block per table.
-     Describe join keys and relationships here. Your ERD (Section 7) will
-     visualise what this section describes in text.
-
-  📌 FOR NON-SQL PROJECTS: Describe the shape of your dataset informally
-     if a formal schema doesn't apply. Even one paragraph is more helpful than nothing.
--->
-
-### Dataset / Table: `[name]`
-
-| Field Name | Data Type | Description | Example Value |
-|------------|-----------|-------------|---------------|
-| `[field_1]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_2]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-| `[field_3]` | [string / int / date / float / boolean] | [What this field represents] | [Non-sensitive example] |
-
-> **Row count (approx.):** [X rows]
-> **Date range:** [Start] – [End]
-> **Key join / relationship:** [e.g., `orders.customer_id` → `customers.id`]
-
-*Add additional table blocks as needed for multi-table projects.*
+> **Row count of the cleaned dataset:** 249669
+> **Column count of the cleaned dataset:** 23
 
 ---
 
