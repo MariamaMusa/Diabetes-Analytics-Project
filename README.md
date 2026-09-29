@@ -134,23 +134,24 @@
 -->
 
 ```
-[Data Source(s)]
+[Data Source]
       ↓
 [Ingestion / Collection Method]
       ↓
 [Cleaning & Transformation]
       ↓
-[Analysis / Modelling / Querying]
+[Analysis / Modelling]
       ↓
 [Output / Visualisation / Reporting]
 ```
 
-1. **Source:** [Where did the data come from? Format, size, access method.]
-2. **Ingestion:** [How was it brought in?]
-3. **Cleaning:** [What issues did you find and fix?]
-4. **Transformation:** [What new fields, aggregations, or structures did you create?]
-5. **Analysis:** [What methods - statistical, visual, query-based, model-based?]
-6. **Output:** [What form do the results take?]
+1. **Source:** CDC Diabetes Health Indicators dataset [Clickable text](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators)
+2. [Where did the data come from? Format, size, access method.]
+3. **Ingestion:** [How was it brought in?]
+4. **Cleaning:** [What issues did you find and fix?]
+5. **Transformation:** [What new fields, aggregations, or structures did you create?]
+6. **Analysis:** [What methods - statistical, visual, query-based, model-based?]
+7. **Output:** [What form do the results take?]
 
 ---
 
