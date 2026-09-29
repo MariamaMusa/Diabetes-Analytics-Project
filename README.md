@@ -165,9 +165,9 @@
 | Physical Health | PhysHlth | integer | Number of days of poor physical health in past the 30 days| 0 |
 | BMI Category (derive) | - | string | BMI category derived from the BMI field | Overweight |
 
-> **Row count of the cleaned dataset:** 249669
+> **Row count:** 249669
 > 
-> **Column count of the cleaned dataset:** 23
+> **Column count:** 23
 
 ---
 
