@@ -199,44 +199,30 @@ This project combined exploratory and hypothesis-driven analysis with predictive
 
 ## 8. Key Insights
 
-**Insight 1: [Short descriptive headline]**
-[What you found + what it suggests. One short paragraph.]
+**Insight 1: Cardiovascular comorbidities show the strongest association with diabetes prevalence**
 
-**Insight 2: [Short descriptive headline]**
-[What you found + what it suggests.]
+Diabetes prevalence increases sharply with the number of pre-existing cardiovascular conditions reported. Prevalence rises from 3.9% among respondents with none of high blood pressure, high cholesterol, heart disease, or stroke to 47.3% among those reporting all four conditions. Individually, high blood pressure is associated with substantially higher diabetes prevalence (24.6% vs. 6.3%), while respondents with a history of heart disease or stroke also show markedly higher prevalence (33.1% and 31.8%, respectively). These findings suggest that diabetes and cardiovascular conditions frequently coexist in this population, supporting integrated screening and risk assessment for individuals with existing cardiovascular conditions.
 
-**Insight 3: [Short descriptive headline]**
-[What you found + what it suggests.]
+**Insight 2: Lower socioeconomic status is associated with a higher diabetes burden**
 
-**Insight 4 (if applicable): [Short descriptive headline]**
-[What you found + what it suggests.]
+Diabetes prevalence decreases consistently as income and education levels increase. Prevalence falls from 24.2% in the lowest income group to 8.5% in the highest, while respondents with no formal education have a prevalence of 25.7% compared with 10.2% among college graduates. This socioeconomic gradient suggests that factors associated with socioeconomic disadvantage may contribute to differences in diabetes burden, potentially including access to preventive healthcare, healthy food, health information, and opportunities for healthy lifestyles. The findings therefore support equity-focused screening and prevention strategies, particularly in lower-income and lower-education populations.
 
-Closingly equal number of males and females have diabetes and among the various age groups, females tend to have diabetes slightly more than males. This is because females are more than males. Also about 30% of the population in LMICs experience a teenage pregnancy each year. Gestational diabetes (GDM) during pregnancy drastically increases the lifetime risk of developing type 2 diabetes which translate into more females having diabetes. Furthermore, the onset of menopause drops estrogen levels, causing rapid metabolic changes and an elevated risk profile later in life. Also, In many LMICs (particularly in sub-Saharan Africa and South Asia), the gender gap in obesity is heavily skewed. Women in these regions experience significantly higher rates of overweight and obesity compared to men. This structural weight disparity directly translates to an elevated risk of developing type 2 diabetes. Societal expectations often place the burden of family care exclusively on women. Consequently, women frequently prioritize the health and nutritional needs of their children and partners over their own health, leading to delayed medical screenings, higher rates of undiagnosed diabetes, and poorer long-term outcomes.
-Generally, prevalence increases with higher educational background but among the various educational groups, diabetes is more prevalent among lower educational groups. Also older age groups have diabetes and the prevalence decreses after 69 years. Generally, prevalence also increases with higher income ranges but among the various income groups, diabetes is more prevalent among lower income groups. Majority of the people within the age groups below 40 years do not know their diabetes status. Generally, Healthcare coverage and cost of access to a medical doctor are not high influences on diabetes prevalence
-The reasons are as follows
-• Sedentary Jobs: Higher-paying jobs often require long hours sitting at a desk or computer, leading to low daily physical activity.
-• Work Stress: High-stress corporate or professional careers raise cortisol levels, a hormone that can contribute to insulin resistance over time.
-• Dietary Habits: Busy schedules and frequent business dining can lead to high consumption of processed foods, alcohol, and calorie-dense meals.
+**Insight 3: Diabetes is strongly associated with physical health limitations and reduced mobility**
 
+Respondents reporting a history of stroke, heart disease, or difficulty walking have substantially higher diabetes prevalence than those without these conditions. For example, diabetes prevalence is 30.7% among respondents reporting difficulty walking compared with 10.9% among those without difficulty walking. Diabetic respondents also report more than twice as many physically unhealthy days per month on average (7.6 vs. 3.5 days) compared with non-diabetic respondents, while the difference in mentally unhealthy days is smaller (4.2 vs. 2.9 days). This indicates that physical health and functional limitations are important markers associated with diabetes status and highlights the value of coordinating diabetes management with cardiovascular, physical-health, and mobility-related care.
 
+**Insight 4: Weight status and physical activity show meaningful lifestyle-related differences in diabetes prevalence**
 
-High BP and cholesterol is common among the entire population analyzed. High BP and cholesterol contribute more to diabtes prevalence.
-reason: Insulin Resistance Link: High blood pressure and abnormal cholesterol levels often stem from insulin resistance, which is the primary driver of type 2 diabetes. When cells resist insulin, the body produces more insulin and glucose, worsening blood sugar control
+Diabetes prevalence varies substantially by weight status and physical activity. Respondents classified as obese have a prevalence of 23.6%, compared with 5.9% among those in the normal-weight category, while physically inactive respondents have nearly twice the prevalence of physically active respondents (21.2% vs. 12.0%). Smoking and lower fruit and vegetable consumption also show differences in prevalence, although these gaps are smaller. Overall, the findings suggest that weight status and physical activity are particularly relevant lifestyle factors for prevention efforts, while dietary and other behavioral factors may require a more nuanced approach.
 
-Majority of the people who said they had no stroke, heart disease and difficulty moving had diabetes. reason:
+**Insight 5: Diabetes prevalence increases substantially with age**
 
-Though both influence the risk of diabetes, Poor mental health contributes more to the risk of diabetes than physical health. reason: • Biological Stress Responses: Chronic psychological stress, anxiety, and depression activate the nervous system and the body's HPA axis, releasing stress hormones like cortisol, adrenaline, and noradrenaline. These hormones raise blood sugar levels and increase insulin resistance over time.
-• Adverse Health Behaviors: People experiencing poor mental health often struggle with lifestyle habits that elevate diabetes risk, such as physical inactivity, poor diet, smoking, and high-risk alcohol consumption.
-• Medication Side Effects: Certain psychotropic medications used to treat severe mental health conditions (such as atypical antipsychotics) carry metabolic side effects, including significant weight gain and impaired glucose tolerance.
+Diabetes prevalence shows a strong age gradient, increasing from 1.4% among respondents aged 18–24 to 22.1% among those aged 70–74, before declining slightly among the oldest age groups. The overall pattern indicates that older adults carry a substantially higher diabetes burden in this dataset. The decline among the oldest groups should be interpreted cautiously, as it may reflect differences in population composition or survivorship effects rather than a genuine reduction in diabetes risk. These findings support age-sensitive screening and prevention strategies, particularly for middle-aged and older adults.
 
+**Insight 6: Sex is associated with a relatively small difference in diabetes prevalence**
 
-Smoking and not engaging in physical activity influences the risk of diabetes. 
-Reason:
-Diabetes is more prevalent among people who do not drink heavily. Reason:
+Diabetes prevalence is somewhat higher among males than females (15.5% vs. 13.3%). However, the difference is relatively small compared with the larger prevalence differences observed across age, socioeconomic status, cardiovascular comorbidities, and physical health indicators. This suggests that sex alone may provide less discriminatory information for identifying higher-prevalence groups than several of the other factors examined in this dataset.
 
-
-Obesity and overweight is associated with high diabtes prevalence
-Including fruits and vegatables in diet is more associated with no diabtes
 ---
 
 ## 9. Recommendations
