@@ -229,6 +229,32 @@ This project combined exploratory and hypothesis-driven analysis with predictive
 **Insight 4 (if applicable): [Short descriptive headline]**
 [What you found + what it suggests.]
 
+Closingly equal number of males and females have diabetes and among the various age groups, females tend to have diabetes slightly more than males. This is because females are more than males. Also about 30% of the population in LMICs experience a teenage pregnancy each year. Gestational diabetes (GDM) during pregnancy drastically increases the lifetime risk of developing type 2 diabetes which translate into more females having diabetes. Furthermore, the onset of menopause drops estrogen levels, causing rapid metabolic changes and an elevated risk profile later in life. Also, In many LMICs (particularly in sub-Saharan Africa and South Asia), the gender gap in obesity is heavily skewed. Women in these regions experience significantly higher rates of overweight and obesity compared to men. This structural weight disparity directly translates to an elevated risk of developing type 2 diabetes. Societal expectations often place the burden of family care exclusively on women. Consequently, women frequently prioritize the health and nutritional needs of their children and partners over their own health, leading to delayed medical screenings, higher rates of undiagnosed diabetes, and poorer long-term outcomes.
+Generally, prevalence increases with higher educational background but among the various educational groups, diabetes is more prevalent among lower educational groups. Also older age groups have diabetes and the prevalence decreses after 69 years. Generally, prevalence also increases with higher income ranges but among the various income groups, diabetes is more prevalent among lower income groups. Majority of the people within the age groups below 40 years do not know their diabetes status. Generally, Healthcare coverage and cost of access to a medical doctor are not high influences on diabetes prevalence
+The reasons are as follows
+• Sedentary Jobs: Higher-paying jobs often require long hours sitting at a desk or computer, leading to low daily physical activity.
+• Work Stress: High-stress corporate or professional careers raise cortisol levels, a hormone that can contribute to insulin resistance over time.
+• Dietary Habits: Busy schedules and frequent business dining can lead to high consumption of processed foods, alcohol, and calorie-dense meals.
+
+
+
+High BP and cholesterol is common among the entire population analyzed. High BP and cholesterol contribute more to diabtes prevalence.
+reason: Insulin Resistance Link: High blood pressure and abnormal cholesterol levels often stem from insulin resistance, which is the primary driver of type 2 diabetes. When cells resist insulin, the body produces more insulin and glucose, worsening blood sugar control
+
+Majority of the people who said they had no stroke, heart disease and difficulty moving had diabetes. reason:
+
+Though both influence the risk of diabetes, Poor mental health contributes more to the risk of diabetes than physical health. reason: • Biological Stress Responses: Chronic psychological stress, anxiety, and depression activate the nervous system and the body's HPA axis, releasing stress hormones like cortisol, adrenaline, and noradrenaline. These hormones raise blood sugar levels and increase insulin resistance over time.
+• Adverse Health Behaviors: People experiencing poor mental health often struggle with lifestyle habits that elevate diabetes risk, such as physical inactivity, poor diet, smoking, and high-risk alcohol consumption.
+• Medication Side Effects: Certain psychotropic medications used to treat severe mental health conditions (such as atypical antipsychotics) carry metabolic side effects, including significant weight gain and impaired glucose tolerance.
+
+
+Smoking and not engaging in physical activity influences the risk of diabetes. 
+Reason:
+Diabetes is more prevalent among people who do not drink heavily. Reason:
+
+
+Obesity and overweight is associated with high diabtes prevalence
+Including fruits and vegatables in diet is more associated with no diabtes
 ---
 
 ## 9. Recommendations
